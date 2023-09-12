@@ -1,4 +1,4 @@
-
+let isMousePressed;
 
 // simple function to create square grid
 function createGrid(dimension){
@@ -14,16 +14,35 @@ function createGrid(dimension){
         container.appendChild(contentRow);
     }
 }
-function changeColour(e){
-    console.log(e.target);
+function changeColour(e, color){
     const rowElement = e.target;
-    rowElement.style.cssText = 'background: red';
+    if (isMousePressed){
+    rowElement.style.backgroundColor = color;
+    }
+    
 }
 
 createGrid(16);
 
-const rowElements = document.querySelectorAll(".row");
+function setMousePressed(){
+    isMousePressed = true;
+}
 
+function setMouseNotPresesd(){
+    isMousePressed = false;
+}
+
+
+
+const rowElements = document.querySelectorAll(".row");
 rowElements.forEach((rowElement) => {
-    rowElement.addEventListener('mouseover', changeColour);
+    rowElement.addEventListener('mousedown', setMousePressed);
+    rowElement.addEventListener('mouseup', setMouseNotPresesd);
+    rowElement.addEventListener('mouseover', function(e) {
+        changeColour(e, "blue");
+    });
+    rowElement.addEventListener('mousedown', function (e) {
+    setMousePressed();
+    changeColour(e, "blue"); // İlk tıklamada işaretleme yapmak için
+  });
   });
