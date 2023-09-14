@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    background-color: #1D1E2C;
+}
+
+h1{
+    color: #AC9FBB;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-bottom: 50px;
+}
+
+.slider-box{
+    height: 100px;
+    width: 200px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+
+
+.buttons button{
+    background-color: #AC9FBB;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+button:focus{
+    background-color: #7C7FA9;
+}
+
+.buttons .color-selector{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.slider-box .slider{
+    height: 20px;
+    width: 200px
+}
+
+.slider-box .valueOfSlider{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #AC9FBB;
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 650px;
+    height: 650px;
+}
+
+.column{
+    position: relative;
+    background-color: #AC9FBB;
+    width: 10px;
+    height: 10px;
+}
+
+.footer h2{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #AC9FBB;,
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 0px;
+}
